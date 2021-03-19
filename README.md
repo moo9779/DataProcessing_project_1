@@ -113,4 +113,4 @@ Beginning with the minute after the deadline, your submission will be docked a f
 day that it is late. For example, if the assignment is due at 11:59 PM EST on Friday and you submit at 3:00 AM EST on Sunday,
 then you will be docked 20% and the max you could receive on that assignment is an 80%. 
 Late penalties are calculated from the last commit in the git log.
-**If you make a commit 48 hours after the deadline, you will receive a 0 -- Please do not do this, it messes up our grading.**
+**If you make a commit 48 hours "test 1" after the deadline, you will receive a 0 -- Please do not do this, it messes up our grading.**
