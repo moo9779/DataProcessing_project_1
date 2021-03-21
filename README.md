@@ -1,116 +1,99 @@
-# Large Scale Data Processing: Project 1
-## Understanding Git
-If you're unfamiliar with version control systems, especially Git, please consult the [Git Handbook](https://guides.github.com/introduction/git-handbook/) and some of the additional resources it provides.
+Byungmoo Brian Kim
+K=1: 8 trials 
+count:1
+(505336095this_is_a_bitcoin_block_of_89168016,0987c2b1dce39039290a14af2ed2cca09269d8f0abea6b916f8ff611f93730da)
+Time elapsed:1s
 
-## Setting up your local environment
-1.	[Install JDK](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html)  
-  a.	Be sure to check that the environment variables are set properly.
+K=2: 199 trials
+count:1
+(977473664this_is_a_bitcoin_block_of_89168016,002677bd49654eaedd57ae4a3b3228b19cd269cf4c24081ac112d2927926da23)
+Time elapsed:1s
 
-2.	[Install Spark](https://spark.apache.org/downloads.html)  
-  a.	Select version 3.0.1 with Hadoop 2.7.  
-  b.	After the installation, you may need to set the environment variables properly.  
-  c.	To test whether or not everything runs, open a terminal and type `spark-shell`. Now that you are in the Scala interpreter, you can execute Scala code here. For example, you can try `println(“Hello World!”)`. You can exit the shell by typing `:q`.  
-  d.	Tip: In the Spark shell, you can test segments of Scala codes before you write them in the file. It's a very convenient way to learn Scala and Spark.   
-  
-3.	[Install SBT](https://www.scala-sbt.org/download.html)  
-  a.	SBT is a builder for Scala programs.  
-  b.	Check that the environment variables are set properly.  
-  
-## Cloning the project_1 repository
-This is a template repository. You can duplicate the repository, renaming it and adjusting your own settings, but cannot directly clone it and push to its **origin/main** branch. Create your own repository by selecting the green **Use this template** button. You'll be submitting the link to the respository you created (more on that later). Once you have your own repository, you can clone it to your local machine.
+K=3: 3443 trials
+count:1
+(530018090this_is_a_bitcoin_block_of_89168016,000ec272065a65a2245e4f2a62cd170de69eeda9ebca5b2ef253674e4c52dcd0)
+Time elapsed:1s
 
-## Validating your environment
-Let's build and execute **project_1**.  
-1. Navigate to the project root and type `sbt clean package` to build the project's **.jar** file.  
-2. Run the following command:
-```
-// Linux
-spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar
+K=4 9999 trials
+count:1
+(1215490459this_is_a_bitcoin_block_of_89168016,0000115f68ae411fc0cfda656b23ed7d617149fda852bb21f2fb5de22b32367c)
+Time elapsed:1s
 
-// Unix
-spark-submit --class "project_1.main" --master "local[*]" target/scala-2.12/project_1_2.12-1.0.jar
-```
-3. Upon successful execution, you should see the message below. Note that `string`, `difficulty`, and `#trials` are the arguments you'll be passing in.
-```
-Usage: project_1 string difficulty #trials
-```
+K=5 199,995 trials
+count:1
+(710458548this_is_a_bitcoin_block_of_89168016,00000a2a7ab1eef052c7d1bb78c2237ab501eebd4f1da2a0d3993545b6c0ea7d)
+Time elapsed:1s
 
-## Setting up GCP
-1. Sign up for an account **with your BC email** on [Google Cloud Platform](https://cloud.google.com).  
-2. Apply [here](https://google.secure.force.com/GCPEDU?cid=qK5GptnHvOd1Azky9STHgTXZKL0TQBk8k%2BgpC7W6XDRhxyd1yHT7DqKeE2yLVLeQ) for the course's pre-approved credits. GCP will request that you verify your email address first.  
-3. Once you verify your email address, you'll receive an email allowing you to redeem your credits. It links to a page where you can redeem using the coupon code GCP provides you.  
-4. You should now have $50 in credit. You can verify this by doing the following:  
-  a. Open the navigation menu in the top left corner.  
-  b. Navigate to **Billing**.  
-  c. Select **bc.edu** as your organization and open the **Billing Account for Education** account.  
-  d. On the overview page for this billing account, there's a **Promotional credits** box towards the bottom right of the page. The balance should be $50.  
-5. Use your credits judiciously. Creating large clusters, using complex features like Jupyter Notebook, or forgetting to terminate clusters after use are some activities that quickly consume credits. While you have $50 in credit, you shouldn't expect to use more than $10 for the course.  
+K=6 7398986 trials
+count:1
+(1523871716this_is_a_bitcoin_block_of_89168016,0000008e1922778b0e96f4cf36374fd32cec1d4b2d0e3d354136e2768d22147b)
+Time elapsed:4s
+ 
+K=7 300000000 trials
+found. count:1
+(1331697934this_is_a_bitcoin_block_of_89168016,000000050c1728c8d6b044e3493edba960579d06ebb39a9403d2b82e0b451cd9)
+Time elapsed:1125s,18 min 51 sec
+4 cores, standard core, 500Gb disk storage, 2 worker nodes, capacity-scheduler:yarn.scheduler.capacity.root.default.ordering-policy:fair
+core:fs.gs.block.size:134217728
+core:fs.gs.metadata.cache.enable:false
+core:hadoop.ssl.enabled.protocols:TLSv1,TLSv1.1,TLSv1.2
+distcp:mapreduce.map.java.opts:-Xmx768m
+distcp:mapreduce.map.memory.mb:1024
+distcp:mapreduce.reduce.java.opts:-Xmx768m
+distcp:mapreduce.reduce.memory.mb:1024
+hadoop-env:HADOOP_DATANODE_OPTS:-Xmx512m
+hdfs:dfs.datanode.address:0.0.0.0:9866
+hdfs:dfs.datanode.http.address:0.0.0.0:9864
+hdfs:dfs.datanode.https.address:0.0.0.0:9865
+hdfs:dfs.datanode.ipc.address:0.0.0.0:9867
+hdfs:dfs.namenode.handler.count:20
+hdfs:dfs.namenode.http-address:0.0.0.0:9870
+hdfs:dfs.namenode.https-address:0.0.0.0:9871
+hdfs:dfs.namenode.lifeline.rpc-address:kimcjo-3390-cluster-m:8050
+hdfs:dfs.namenode.secondary.http-address:0.0.0.0:9868
+hdfs:dfs.namenode.secondary.https-address:0.0.0.0:9869
+hdfs:dfs.namenode.service.handler.count:10
+hdfs:dfs.namenode.servicerpc-address:kimcjo-3390-cluster-m:8051
+hive:hive.fetch.task.conversion:none
+mapred-env:HADOOP_JOB_HISTORYSERVER_HEAPSIZE:3840
+mapred:mapreduce.job.maps:21
+mapred:mapreduce.job.reduce.slowstart.completedmaps:0.95
+mapred:mapreduce.job.reduces:7
+mapred:mapreduce.jobhistory.recovery.store.class:org.apache.hadoop.mapreduce.v2.hs.HistoryServerLeveldbStateStoreService
+mapred:mapreduce.map.cpu.vcores:1
+mapred:mapreduce.map.java.opts:-Xmx2524m
+mapred:mapreduce.map.memory.mb:3156
+mapred:mapreduce.reduce.cpu.vcores:1
+mapred:mapreduce.reduce.java.opts:-Xmx2524m
+mapred:mapreduce.reduce.memory.mb:3156
+mapred:mapreduce.task.io.sort.mb:256
+mapred:yarn.app.mapreduce.am.command-opts:-Xmx2524m
+mapred:yarn.app.mapreduce.am.resource.cpu-vcores:1
+mapred:yarn.app.mapreduce.am.resource.mb:3156
+spark-env:SPARK_DAEMON_MEMORY:3840m
+spark:spark.driver.maxResultSize:1920m
+spark:spark.driver.memory:3840m
+spark:spark.executor.cores:2
+spark:spark.executor.instances:2
+spark:spark.executor.memory:5739m
+spark:spark.executorEnv.OPENBLAS_NUM_THREADS:1
+spark:spark.scheduler.mode:FAIR
+spark:spark.sql.cbo.enabled:true
+spark:spark.ui.port:0
+spark:spark.yarn.am.memory:640m
+yarn-env:YARN_NODEMANAGER_HEAPSIZE:1536
+yarn-env:YARN_RESOURCEMANAGER_HEAPSIZE:3840
+yarn-env:YARN_TIMELINESERVER_HEAPSIZE:3840
+yarn:yarn.nodemanager.address:0.0.0.0:8026
+yarn:yarn.nodemanager.resource.cpu-vcores:4
+yarn:yarn.nodemanager.resource.memory-mb:12624
+yarn:yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs:86400
+yarn:yarn.scheduler.maximum-allocation-mb:12624
+yarn:yarn.scheduler.minimum-allocation-mb:1
 
-## Creating a GCP project
-1. Select the **bc.edu** organization name in the top bar and then the **New Project** button in the top right corner of that menu.  
-2. For the project name, we recommend that you follow the `bcusername-csci3390-project` convention, e.g. `smith-csci3390-project1`.  
-3. Leave **bc.edu** as the organization and choose **bc.edu/Learning/Student** (which you can access through **Browse**) as the location.  
-4. Creating the project should bring you to the project overview page. In the search bar at the top, search for "dataproc" and select the **Dataproc** product.  
-5. Enable the Cloud Dataproc API.  
-6. Select the **Create Cluster** button and configure your cluster the following way:  
-  a. Cluster name `bcusername-csci3390-cluster`, e.g. `smith-csci3390-cluster`.  
-  b. Version image 2.0 with Debian or Ubuntu (it will look like `2.0-debian10`).  
-  c. In the `Customize cluster` page, check the box in the `Scheduled deletion` section that says "Delete after a cluster idle time period without submitted jobs" and specify a 2 hour timeout. This will terminate the cluster in case you forget to manually.  
-7. To execute the project's **.jar** file, you'll need to upload it somewhere accessible to the cluster. This can be accomplished by creating a [GCP storage bucket](https://console.cloud.google.com/storage). Name it `bcusername-csci3390-bucket`, e.g. `smith-csci3390-bucket`. Leave the rest of the settings on their default.  
-8. Upload the **.jar** file located in **target/scala-2.12** in your project directory.  
-9. Back in the **Dataproc** console, select the **Submit Job** button on the **Jobs** page.  
-10. Submit a job with the following configuration:  
-  a. Select the cluster you created for **Cluster**.  
-  b. `Spark` job type.  
-  c. `project_1.main` for the main class.  
-  d. `gs://your-bucket-name/project_1_2.12-1.0.jar` for the **.jar** file.  
-  e. A value of 1 for maximum restarts per hour.  
-11. Upon successful execution, you should see `Usage: project_1 string difficulty #trials` as the job output. Cheers to successfully configuring your cloud environment.
 
-## Bitcoin mining with Spark
-The key to mining Bitcoin is to solve a puzzle involving the SHA-256 hash function, where SHA stands for "security hash algorithm" and 256 denotes the output of the hash function as having 256 bits (or, equivalently, a 64-digit hexadecimal number). Given a Bitcoin header string `S`, the puzzle is to find a positive integer `x` (called "nonce") such that the concatenation `xS` is hashed to a hexadecimal number with `k` leading zeros. The parameter `k` is known as the difficulty of the puzzle. The actual Bitcoin difficulty is currently 11. [Here](https://emn178.github.io/online-tools/sha256.html) is a working exhibit of an SHA-256 calculator.  
+My process for estimating the number of trials was incrementing by 5,000,000. K=6 had 7398986 trials, so I started at 10,000,000 trials. Then, I incremented by 5,000,000 and the times went from 5 minutes to 7,12, 15, 17 and 18 minutes for 10M, 15M, 20M, 25M and 30M trials respectively. At 25 million, it still said there was no match so when I got one match at 30M I stopped. Since I got 1 match and each job was taking 15-20 minutes, I stopped at 30M.
 
-Let's look at an example of the mining process to clarify. Say we hash the string `this_is_a_bitcoin_block` with the SHA-256 function, which produces `5de97c4b0b4fd55c033fb1de4723de24b8fea9c6caa09af43008e0412ee2847a`. Now, we set the nonce to 20 and prepend it to the string, giving us `20this_is_a_bitcoin_block`. The new string hashes to `0c6de9a1e7a6b958dfe13c7383d9a5d3029a702691dfe689adec21b06676710b`, thus solving the puzzle for `k = 1`. Subsequently, a value of 457 for the nonce solves the puzzle for `k = 2` since `457this_is_a_bitcoin_block` hashes to `004306ef8f43e38fb17bce7cb96e568ed904e334dafb3cd69568a27ac564e08c`.  
 
-Your mission (and yes, you have to accept it) is to run **project_1** with Spark to determine the nonce for varying difficulties of `k` with one of the following strings:
-```
-// If you're working in a pair
-this_is_a_bitcoin_block_of_yourEagleId1_and_yourEagleId2
-
-// If you're working alone
-this_is_a_bitcoin_block_of_yourEagleId
-```
-
-The program accepts three parameters: the header string `S`, the difficulty `k`, and the number of trials `n`. For each trial, it will generate a random number between 1 and 2<sup>32</sup>-1 for the nonce `x` and hash `xS`. The program distributes the `n` trials evenly among the compute nodes and executes them in parallel. If a valid nonce is found for difficulty `k`, `xS` as well as its hash value will be outputted.  
-
-Pass in the arguments by appending them to the `spark-submit` command you ran earlier. For example:
-```
-// Linux
-spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_12345678 2 100
-
-// Unix
-spark-submit --class "project_1.main" --master "local[*]" target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_12345678 2 100
-```
-In GCP, simply include the arguments in the **Arguments** field of the job you're submitting.  
-
-## Reporting your findings
-You'll be submitting a report along with your code that provides commentary on the tasks below.  
-
-1. **(4 points)** Run the program on your local machine to solve cases `k = 2,3,4,5,6`. For each `k`, provide `xS`, its hash value, the total time elapsed, and the number of trials.  
-2. **(3 points)** Run the program on GCP to solve the case `k = 7`. Provide `xS`, its hash value, the total time elapsed, and the number of trials. Describe your cluster's configuration (number of machines, number/type of cores, etc.) and your process for estimating the number of trials needed in order to find the nonce.  
-3. **(3 points)** Modify **one** line of code in **src/main/scala/project_1/main.scala** so that the program generates the potential nonce from 1 to `n` (the number of trials) instead of randomly. Discuss whether or not this is more efficient than the randomized approach.
-
-## Submission via GitHub
-Delete your project's current **README.md** file (the one you're reading right now) and include your report as a new **README.md** file in the project root directory. Have no fear—the README with the project description is always available for reading in the template repository you created your repository from. For more information on READMEs, feel free to visit [this page](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes) in the GitHub Docs. You'll be writing in [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown). Be sure that your repository is up to date and you have pushed all changes you've made to the project's code. When you're ready to submit, simply provide the link to your repository in the Canvas assignment's submission.
-
-## You must do the following to receive full credit
-1. Create your report in the ``README.md`` and push it to your repo
-2. In the report you must include your full name and your partner's full name, in addition to collaborators
-3. Submit a link to your repo on the canvas assignment
-
-## Late Submission Penalties
-Beginning with the minute after the deadline, your submission will be docked a full letter grade (10%) for every 
-day that it is late. For example, if the assignment is due at 11:59 PM EST on Friday and you submit at 3:00 AM EST on Sunday,
-then you will be docked 20% and the max you could receive on that assignment is an 80%. 
-Late penalties are calculated from the last commit in the git log.
-**If you make a commit 48 hours "test 1" after the deadline, you will receive a 0 -- Please do not do this, it messes up our grading.**
+Part c:
+I believe that this is more efficient than generating random numbers because with random numbers, there is no set limit with how many times it could take. If there are 100 trials, it could find it 10 times or 1 time, all based on randomness. If there was a program that generated the potential nonce instead of randomly creating it, then at least there would be consistency with the results, making it more efficient. If it were done randomly, there would be consistency and thus making it more inefficient and in the long run, create more work for the cpu, cores and nodes.

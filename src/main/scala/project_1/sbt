@@ -1,0 +1,5 @@
+// Linux
+spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar
+
+// Unix
+spark-submit --class "project_1.main" --master "local[*]" target/scala-2.12/project_1_2.12-1.0.jar
