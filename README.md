@@ -33,7 +33,9 @@ K=7 300000000 trials
 found. count:1
 (1331697934this_is_a_bitcoin_block_of_89168016,000000050c1728c8d6b044e3493edba960579d06ebb39a9403d2b82e0b451cd9)
 Time elapsed:1125s,18 min 51 sec
-4 cores, standard core, 500Gb disk storage, 2 worker nodes, capacity-scheduler:yarn.scheduler.capacity.root.default.ordering-policy:fair
+4 cores, standard core, 500Gb disk storage, 2 worker nodes, 
+
+capacity-scheduler:yarn.scheduler.capacity.root.default.ordering-policy:fair
 core:fs.gs.block.size:134217728
 core:fs.gs.metadata.cache.enable:false
 core:hadoop.ssl.enabled.protocols:TLSv1,TLSv1.1,TLSv1.2
